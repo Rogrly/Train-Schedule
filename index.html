@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Galaxy Train Station</title>
+    <!-- Linking to local file stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Linking to Bootstrap API-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Linking to Bootstrap - Date Picker-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <!-- Linking to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Linking to Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <!--  Linking to Google Fonts API (Mono-Space)-->
+    <link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
+</head>
+<body>
+    <!--Setting Bootstrap Row-->
+    <div class="row">
+        <!--Putting Header/Banner Content within "Container" Div-->
+        <!--Setting column medium 12 via Bootstrap-->
+        <div class="container col-md-12">
+            <!--Creating Div id "header" for CSS and Jumbotron with text center-->
+            <div id="header" class="jumbotron text-center">
+                <p>Local Time: <span id="localTime"></span></p>
+                <h1>Galaxy Train Station</h1>
+                <h2>Intergalactic Transportation</h2>
+                <!-- Displaying Current Time Within Div with <Span> -->
+                <!-- Inserting span id "localTime"/variable "local" in script-->
+            </div>
+        </div>
+    </div>
+    <!--Generating row and columns for Table-->
+    <div class="row">
+        <div class="col-md-12">
+            <!--Inserting a table containing user form content -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center"><b>Local Space-Trains</b></h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <!--Identifying columns to fit dynamic generated rows-->
+                        <thead>
+                            <tr>
+                                <th>Space-Train Name</th>
+                                <th>Destination</th>
+                                <th>Next Departure:</th>
+                                <th>Frequency (Mins):</th>
+                                <th>Upcoming (Mins)</th>
+                            </tr>
+                        </thead>
+                        <!-- Leaving the tbody empty - dynamically creating rows will be dropped here-->
+                        <tbody id="train-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Setting new row & column for input form div content-->
+    <!--Reference: (07-firebase/01-Activities/Day-03/17-TimeSheet/Solved/index.html)-->
+    <img class="traingif" src="assets/images/spacetrain.gif">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel" id="panel-formid">
+                <div class="panel-heading">
+                    <h3><b>Additional Space-Train(s)</b></h3>
+                </div>
+                <!--User inputs that will be referenced in script-->
+                <div class="panel-body">
+                    <form id="train-add" class="form-group">
+                        <div><label for="space-train-name">Train Name</label>
+                            <input type="text" class="form-control" id="space-train"></div>
+                        <div><label for="destination">Destination</label>
+                            <input type="text" class="form-control" id="dest"></div>
+                        <div><label for="departure-time" class="input">Next Departure</label>
+                            <input type="time" class="form-control" id="next"></div>
+                        <div><label for="frequency">Frequency (minutes)</label>
+                            <input type="text" class="form-control" id="freq"></div>
+                        <button class="btn btn-primary" id="addButton" type="add">Add</button>
+                        <button class="btn btn-primary" id="resetButton" type="reset">Reset Form</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!--Attaching JQuery link to let code function with webpage-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <!-- Linking local Javascript file source to the HTML -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

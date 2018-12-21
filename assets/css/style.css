@@ -1,0 +1,73 @@
+body{
+background-image: url("spacetrain.jpg");
+}
+
+html {
+    font-family: 'Major Mono Display', monospace;
+}
+
+
+#header {
+    background-image: url("space.gif");
+    color: whitesmoke;
+    font-family:'Major Mono Display', monospace;
+}
+
+h1 {
+    background-color:black;
+    color:whitesmoke;
+    font-family: 'Major Mono Display', monospace;
+}
+
+h2 {
+    background-color: black;
+    color:whitesmoke;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 30px;
+}
+
+h3 {
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 30px;
+}
+
+p {
+    background-color: black;
+    color:whitesmoke;
+    font-family: 'Major Mono Display', monospace;
+}
+
+div {
+    opacity: 0.9;
+    color:whitesmoke;
+    font-family: 'Major Mono Display', monospace;
+}
+
+th {
+    background-color: black;
+}
+
+tr {
+    background-color: black;
+}
+
+#panel-body {
+    background-color:black;
+    font-style: bolder;
+    font-size: 15px;
+}
+
+#panel-formid {
+    float: right;
+}
+
+.traingif {
+    position: absolute;
+    top: 92%;
+    bottom: 50%;
+    left: 55%;
+    float: left;
+    opacity: 0.6;
+}
